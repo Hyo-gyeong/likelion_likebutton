@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+    <br>
+    <div class="row">
+    {% for p in posts %}
+        <div class="col-sm-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <a href="{% url 'detail' p.id %}" class="card-link">{{p.id}}번째 글</a>
+                    <h5 class="card-title">{{p.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{p.body}}</h6>
+                    <p class="card-text">{{p.date}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

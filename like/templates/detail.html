@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class=container>
+<div class=posts>
+    <span class=post-title>{{post.title}}</span>    <br>
+    <p>{{post.name}}가 씀</p>
+    <span class=post-body>{{post.body}}</span>  <br>
+   
+    <li>
+    <a href="{% url 'post_like' post.id %}">좋아요 {{ post.like_count }}개</a>
+    </li>
+    
+    <br>
+    <a class = edit href = "{% url 'edit' post.id %}">수정</a>
+    <a class = delete href = "{% url 'delete' post.id %}">삭제</a>
+</div>
+    <div class =comments>
+        <span class= comment>댓글:</span><br>
+        {% for comment in post.comments.all %}
+            {{ comment.contents }} 
+            <a class=edit href="{% url 'comment_edit' post.id comment.id %}">수정</a>
+            <a class=delete href="{{% url 'comment_delete' post.id comment.id %}">삭제</a>
+            <br>
+        {% endfor %}
+    </div>
+    <span class= comment>댓글 쓰기:</span><br>
+    <form action="{% url 'comment_create' post.id %}" method=POST>
+            {% csrf_token %}
+            <input type=text name=contents>
+            <button type="submit" class="btn">댓글 쓰기</button>
+    </form>
+</div>   
+
+{% endblock %}

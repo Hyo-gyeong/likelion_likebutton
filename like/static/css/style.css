@@ -1,0 +1,91 @@
+@font-face { 
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+@font-face { 
+    font-family: 'NIXGONL-Vb';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/NIXGONL-Vb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal; 
+}
+
+.title {
+    font-family: 'yg-jalnan';
+    font-size : 35px;
+    color:black;
+}
+.new_post   {
+    float:right;
+    margin-top:30px;
+    margin-right:30px;
+    color: black;
+    font-weight:bold;
+}
+
+.new_post:hover {
+    background-color: lightgrey;
+}
+
+.row    {
+    margin:50px;
+    padding:10px;
+}
+
+.card   {
+    margin:20px;
+    
+}
+
+.card-link  {
+    color:#B5B175;
+}
+
+.card-title {
+    font-family:'yg-jalnan';
+}
+
+.card:hover{
+    background-color: lightgray;
+}
+
+.post-title {
+    font-size:40px;
+    font-weight: bold;
+    font-family:'yg-jalnan';
+}
+
+.post-body  {
+    font-size:20px;
+}
+
+.comments   {
+    margin-top:50px;
+    margin-bottom:50px;
+    
+}
+
+.comment    {
+    font-size: 20px;
+    font-family:'yg-jalnan';
+}
+
+.edit   {
+    color: #498CDF;
+    font-family:'yg-jalnan';
+    
+}
+
+.delete {
+    color: #AA3B4A;
+    font-family:'yg-jalnan';
+}
+
+.btn    {
+    font-family: 'NIXGONL-Vb';
+}
+
+.btn:hover  {
+    background-color: #B5B175;
+}
